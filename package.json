@@ -1,6 +1,6 @@
 {
   "name": "cooker-parser-less",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "parse less",
   "homepage": "https://github.com/codering/fecooker",
   "main": "index.js",
@@ -19,7 +19,8 @@
     "url": "https://github.com/codering/fecooker/issues"
   },
   "dependencies": {
-      "less": "^2.7.1"
+    "less": "^2.7.1",
+    "less-plugin-npm-import": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {}

@@ -1,6 +1,7 @@
 'use strict';
 
 var less = require('less');
+var NpmImportPlugin =  require('less-plugin-npm-import')
 var root = fis.project.getProjectPath();
 
 module.exports = function(content, file, conf){
@@ -8,6 +9,7 @@ module.exports = function(content, file, conf){
     conf.paths = [ file.dirname, root ];
     conf.syncImport = true;
     conf.relativeUrls = true;
+    conf.plugins =  conf.plugins || [new NpmImportPlugin({prefix: '~'})]
 
     less.render(content, conf, function (err, result) {
         if (err) {
